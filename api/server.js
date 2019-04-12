@@ -22,4 +22,4 @@ server.get('/', async (req, res) => {
     res.status(200).json(rows);
 });
 
-module.exports = server;
+module.exports = server; 
