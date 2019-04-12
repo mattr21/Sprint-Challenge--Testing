@@ -25,12 +25,12 @@ describe('games model', () => {
     });
 
     describe('get', () => {
-        it('should get all games', () => {
+        it('should get all games', async () => {
             await Games.insert({ title: 'DAoC', genre: 'mmorpg', releaseYear: '1995' });
             await Games.insert({ title: 'The Last Of Us 2', genre: 'action', releaseYear: '2020' });
 
             const games = await Games.getAll();
-            expect(games.length).toBe(1)
+            expect(games.length).toBe(2)
         });
     });
 });
