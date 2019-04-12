@@ -7,6 +7,7 @@ module.exports = {
 
 async function insert(game) {
   const [id] = await db('games').insert(game);
+  // console.log(id);
 
   return db('games')
     .where({ id })

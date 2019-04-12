@@ -4,9 +4,9 @@ const server = require('./server.js');
 describe('server.js', () => {
     describe('POST', () => {
         it('should respond with 201', async () => {
-            const responde = await request(server)
+            const response = await request(server)
                 .post('/games')
-                .send({ title: 'DAoC', genre: 'mmorpg', releaseYear: '1995' });
+                .send({ title: 'test', genre: 'mmorpg', releaseYear: '1995' });
 
             expect(response.status).toBe(201);
         });

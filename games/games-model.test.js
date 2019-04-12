@@ -9,7 +9,7 @@ describe('games model', () => {
     describe('insert', () => {
         it('should insert the provided games', async () => {
             await Games.insert({ title: 'DAoC', genre: 'mmorpg', releaseYear: '1995' });
-            await Games.insert({ title: 'The Last Of Us 2', genre: 'action', releaseYear: '2020' });
+            await Games.insert({ title: 'The Last Of Us 2', genre: 'action', releaseYear: '2020' }); 
 
             const games = await db('games');
             expect(games).toHaveLength(2);
